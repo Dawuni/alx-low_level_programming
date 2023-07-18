@@ -1,12 +1,12 @@
 #include "main.h"
 /**
-*_isalpha - controls if a character is alphabetical
+*_islower - controls if a character is in lowercase
 *@c: character to be verified
 *Return: return 0 or 1
 */
-int _isalpha(int c)
+int _islower(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (c >= 'a' && c <= 'z')
 	return (1);
 
 	return (0);
