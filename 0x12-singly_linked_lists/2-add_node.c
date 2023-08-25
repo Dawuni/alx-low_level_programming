@@ -1,10 +1,9 @@
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a liked list
+ * add_node - adds a new node at the beginning of a linked list
  *@head:duplicate  pointer to the head of the list
  *@str: string to be added
  *
@@ -14,30 +13,30 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	char *dupp;
-	int lenn;
-	list_t *neww;
+	char *dup;
+	int lnn;
+	list_t *new;
 
-	neww = malloc(sizeof(list_t));
-	if (neww == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
 
-	dupp = strdup(str);
-	if (dupp == NULL)
+	dup = strdup(str);
+	if (dup == NULL)
 	{
-		free(neww);
+		free(new);
 		return (NULL);
 	}
-	for (lenn = 0; str[lenn];)
-		lenn++;
+	for (len = 0; str[len];)
+		len++;
 
-	neww->str = dupp;
-	neww->lenn = lenn;
+	new->str = dup;
+	new->len = lenn;
 	neww->next = *head;
 
-	*head = neww;
+	*head = new;
 
-	return (neww);
+	return (new);
 
 }
 
