@@ -10,11 +10,11 @@ size_t print_listint(const listint_t *h)
 {
 	size_t num = 0;
 
-	while (cursor)
+	while (h)
 	{
-		printf("%d\n", cursor->n);
+		printf("%d\n", h->n);
 		num++;
-		cursor = cursor->next;
+		h = h->next;
 	}
 	return (num);
 }
